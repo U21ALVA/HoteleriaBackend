@@ -28,7 +28,7 @@ public class JwtProvider {
                 .subject(email)
                 .issuedAt(now)
                 .expiration(expiryDate)
-                .signWith(getSigningKey(), Jwts.SIG.HS512)
+                .signWith(getSigningKey(), Jwts.SIG.HS256)
                 .compact();
     }
 
